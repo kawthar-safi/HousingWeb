@@ -1,0 +1,14 @@
+<div class="logo">
+  <img src="assets/download.svg" alt="web page logo" />
+</div>
+<div *ngIf="location" class="location-detail">
+  <h1>{{ location.name }}</h1>
+  <img [src]="location.photo" alt="{{ location.name }}" />
+  <p><strong>City:</strong> {{ location.city }}</p>
+  <p><strong>State:</strong> {{ location.state }}</p>
+  <p><strong>Available Units:</strong> {{ location.availableUnits }}</p>
+  <p><strong>WiFi:</strong> {{ location.wifi ? "Yes" : "No" }}</p>
+  <p><strong>Laundry:</strong> {{ location.laundry ? "Yes" : "No" }}</p>
+
+  <a [routerLink]="['/']" class="back-link">⬅ Back to Home</a>
+</div>

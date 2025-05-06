@@ -1,0 +1,17 @@
+<div class="logo">
+  <img src="assets/download.svg" alt="web page logo" />
+</div>
+<div class="housing-list">
+  @for (loc of locations; track loc.id) {
+
+  <div class="housing-card">
+    <img [src]="loc.photo" alt="{{ loc.name }}" />
+    <h3>{{ loc.name }}</h3>
+    <p>{{ loc.city }}, {{ loc.state }}</p>
+    <a [routerLink]="['/details', loc.id]" routerLinkActive="router-link-active"
+      >View Details</a
+    >
+  </div>
+
+  }
+</div>
